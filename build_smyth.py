@@ -125,6 +125,24 @@ def build(source, output):
     contents = "".join(render(part, set(ids), forward, manual, generated) for part in body)
     header = f"""<!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="A companion for reading ancient texts, with vocabulary, morphology, sentence diagrams, and grammar references.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Heleios">
+<meta property="og:title" content="Heleios">
+<meta property="og:description" content="A companion for reading ancient texts.">
+<meta property="og:url" content="https://heleios.org/smyth.html">
+<meta property="og:image" content="https://heleios.org/assets/share-preview.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ἄνδρα above μοι ἔννεπε, in forest green on cream.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Heleios">
+<meta name="twitter:description" content="A companion for reading ancient texts.">
+<meta name="twitter:image" content="https://heleios.org/assets/share-preview.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icon-180.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png">
 <title>Smyth · A Greek Grammar for Colleges</title><link rel="stylesheet" href="smyth.css">
 <header><a href="index.html">Heleios</a><h1>A Greek Grammar for Colleges</h1>
 <p>Herbert Weir Smyth · 1920</p>

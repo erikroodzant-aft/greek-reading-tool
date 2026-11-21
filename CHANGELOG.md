@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Added sharing metadata, a Greek verse preview image and the approved Η site icon; page content and reading behavior are unchanged.
+
 - Added reproducible packages with commit/content manifests, packaged-file checks and a prepared validation-gated Pages workflow (activation pending).
 - Hid empty Smyth results, clarified book-load retry guidance, removed obsolete grammar/dictionary helpers and corrected stale provenance text.
 
