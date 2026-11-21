@@ -1,5 +1,19 @@
 # Development backlog
 
+## Completed: heleios.org domain verification and HTTPS
+
+Completion verified November 21, 2026: GitHub ownership verification succeeded; Enforce HTTPS enabled; https://heleios.org loads without a security warning; www redirects to the secure apex; the previously shared GitHub Iliad 1.1 link redirects to the secure reader and loads Book 1. Historical setup notes follow.
+
+The domain connection was configured on November 21, 2026. Namecheap has an apex ALIAS and a www CNAME pointing to erikroodzant-aft.github.io, plus GitHub's ownership-verification TXT record. GitHub could not yet retrieve the records at the last check; ownership verification and HTTPS remain incomplete. Users have seen a secure-connection warning.
+
+- Recheck public DNS and GitHub's account-level domain verification; complete verification when the TXT record is visible.
+- Recheck repository Pages settings, wait for certificate issuance, and enable Enforce HTTPS when available.
+- Verify https://heleios.org and https://www.heleios.org, the old GitHub Pages address, and an existing passage link. Do not bypass browser security warnings.
+- If unresolved 24 hours after configuration, investigate delegation, registration/email verification, records and certificate status rather than assuming propagation.
+- Keep this a release priority: existing shared GitHub links may redirect to the new domain during the transition.
+- Preserve the remote CNAME configuration when synchronizing local work. Homepage, branding and issue-form changes approved for publication on November 21, 2026.
+
+
 ## Code quality and release discipline
 
 Before public beta, review the reader, dictionary, Smyth search, converters and packaging for duplicated logic, oversized functions, stale code, inconsistent data handling and fragile interactions. Prioritize defects and changes that make the current product easier to maintain. Keep each cleanup scoped and preserve behavior through focused tests.

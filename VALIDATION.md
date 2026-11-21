@@ -1,4 +1,4 @@
-# Greek Reading Tool validation report
+# Heleios validation report
 
 The reader includes all 24 books of each epic as represented by the two uploaded Perseus AGDT v2.1 XML files. The earlier demo and importer ZIPs were mentioned in the prior chat but their files were unavailable. This package reconstructs the responsive reader, passage navigation and word/syntax panel. The dictionary integration is documented below. Smyth, commentary and meter are outside this package.
 

@@ -1,0 +1,33 @@
+name: Report a problem
+description: Report a reader problem or a possible text, dictionary, or annotation error.
+title: "[Problem]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve Heleios. Reports are public and require a GitHub account. Please do not include private information.
+  - type: input
+    id: passage
+    attributes:
+      label: Passage or grammar section
+      description: If relevant, include the work, book and line, or the Smyth section. You can also paste the page address.
+      placeholder: Iliad 1.3, Odyssey 1.1, or Smyth § 1475
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the problem and the steps needed to see it. You may attach a screenshot here.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: For a possible text or annotation error, explain your reading and include a source if available.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: For example, Safari on iPhone or Edge on Windows

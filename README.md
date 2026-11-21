@@ -1,10 +1,12 @@
-# Greek Reading Tool
+# Heleios
 
-A work-in-progress Homeric Greek reader with the Iliad and Odyssey, word morphology, Cunliffe's lexicon, sentence dependency diagrams, and searchable offline Smyth grammar.
+*A companion for reading ancient texts*
+
+A Greek reader with the Iliad and Odyssey, word morphology, Cunliffe's lexicon, sentence dependency diagrams, and searchable offline Smyth grammar.
 
 ## Try the reader
 
-If this repository is published with GitHub Pages, open its Pages address and choose a work, book and line. All reading and reference data are included. External source links require an internet connection.
+Open [heleios.org](https://heleios.org/) and choose a work, book and line. All reading and reference data are included. External source links require an internet connection.
 
 For local use, download and extract the repository, then open a terminal in this folder and run:
 
@@ -14,13 +16,13 @@ python -m http.server 8765 --bind 127.0.0.1
 
 Open http://127.0.0.1:8765/ and keep the terminal running while reading.
 
-## Preview limitations
+## Reading aids and limitations
 
 - Cunliffe previews are automatically selected excerpts and may begin with forms, etymology or a cross-reference. Expand the full entry when a preview is unhelpful.
 - Exact dictionary headword matching leaves some lemmas unmatched.
 - Greek text and grammatical annotations preserve known gaps and anomalies in the supplied treebank.
-- The phone layout is preliminary. The planned bottom sheet and visual refresh are in the backlog.
-- Automated tests pass, but full browser and mobile release verification is still pending.
+- The phone layout supports a stacked word panel; a dedicated bottom-sheet interaction remains in the backlog.
+- All 28 automated tests pass. Browser checks cover homepage navigation, line limits, word analysis, dictionary loading and Smyth search at desktop and phone-sized widths; testing on physical mobile devices remains pending.
 
 ## Sources and permissions
 
@@ -31,6 +33,8 @@ No blanket license for the application code has been selected by the project own
 ## Checks
 
 Run `node --test *.test.mjs` with a current Node installation. The corpus conversion can additionally be checked against the original XML inputs with `validate.py`.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the update and release process and [CHANGELOG.md](CHANGELOG.md) for the change history.
 
 ## GitHub Pages
 

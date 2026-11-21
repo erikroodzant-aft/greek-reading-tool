@@ -18,3 +18,24 @@ td { border: 1px solid #d0c9ba; padding: .2rem .45rem }
 mark { background: #f3df98; color: #292823 }
 
 #search-results .more-results { list-style: none; margin-block: .8rem; }
+
+/* Heleios reference-page styling. */
+body { background:#f8f6f0; color:#282e2a; line-height:1.65 }
+header { border-bottom:1px solid #d7dcd4; padding:1.1rem 0 1.4rem; margin-bottom:2rem }
+header > a { font-family:Georgia,serif; font-size:1.7rem; font-weight:600; text-decoration:none }
+h1, h3 { color:#285348; letter-spacing:-.02em; font-weight:500 }
+h1 { font-size:clamp(1.8rem,4vw,2.5rem) }
+a { color:#285c4c; text-underline-offset:.18em; text-decoration-thickness:1px }
+input, button { border:1px solid #bdc8be; border-radius:.4rem; padding:.4rem .65rem; background:#fffefa; color:inherit }
+button { background:#2e5c4e; color:white; border-color:#2e5c4e; font-weight:550; cursor:pointer }
+button:hover { background:#23483c }
+button:focus-visible, a:focus-visible, input:focus-visible { outline:2px solid #86643a; outline-offset:3px }
+form { display:flex; flex-wrap:wrap; gap:.6rem; align-items:end; margin-block:1rem }
+label { display:inline-flex; flex-wrap:wrap; gap:.4rem; align-items:center }
+#query { width:min(100%,22rem) }
+#search-results:has(li) { border:1px solid #d4dcd3; border-radius:.5rem; background:#fffefa; padding:1.2rem 1.2rem 1.2rem 2.4rem }
+#search-results li { margin-block:.7rem }
+.smyth-paragraph { margin-block:.7rem }
+.smyth-number { color:#285c4c }
+td { border-color:#d4dcd3 }
+section:target, [id^="homer-example-"]:target { background:#e9eee5; outline-color:#507262 }

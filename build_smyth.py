@@ -126,7 +126,7 @@ def build(source, output):
     header = f"""<!doctype html>
 <html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Smyth · A Greek Grammar for Colleges</title><link rel="stylesheet" href="smyth.css">
-<header><a href="index.html">Greek Reading Tool</a><h1>A Greek Grammar for Colleges</h1>
+<header><a href="index.html">Heleios</a><h1>A Greek Grammar for Colleges</h1>
 <p>Herbert Weir Smyth · 1920</p>
 <form id="section-form"><label>Section <input id="section-number" inputmode="numeric" required pattern="[0-9]+"></label> <button>Go</button></form>
 <p id="section-status" role="status"></p>

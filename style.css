@@ -76,3 +76,70 @@ ul { padding-inline-start: 1.1rem }
 .reader-title:focus-visible { outline: 2px solid #315b51; outline-offset: 4px }
 
 
+
+.site-tagline { margin: 0 0 .4rem; color: #525047; font-size: 1rem }
+
+/* Homepage introduction and reading guidance. */
+.home-main { display: block; max-width: 64rem; padding-block: 1.6rem }
+.home-main > section + section, .home-main > details, .home-preview { margin-top: 2rem }
+.home-intro { max-width: 46rem }
+.home-intro h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; color: #315b51 }
+.home-intro p { max-width: 43rem }
+.preview-label { margin: 0 0 .7rem; font-size: .875rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: #525047 }
+.home-help { max-width: 48rem }
+.home-help li { margin-block: .65rem }
+.home-preview { max-width: 48rem; border-top: 1px solid #c8c1b4; padding-top: 1.25rem; color: #525047 }
+.home-preview h2 { color: #292823; font-size: 1.3rem }
+.home-page footer { padding-block: 1rem }
+
+/* Approved Heleios visual styling. */
+body { background:#f8f6f0; color:#282e2a; max-width:84rem; line-height:1.65 }
+header { border-bottom:1px solid #d7dcd4; padding:1.1rem 0 1.4rem }
+h1 { color:#285348; font-size:clamp(2.1rem,4vw,3rem); letter-spacing:-.035em; margin-bottom:.35rem }
+h2 { letter-spacing:-.02em }
+.site-tagline { color:#636d65; font-size:1rem }
+a { color:#285c4c; text-underline-offset:.18em; text-decoration-thickness:1px }
+a:hover { color:#153e30 }
+button, input, select { border:1px solid #bdc8be; border-radius:.4rem; padding:.4rem .65rem; background:#fffefa }
+button { background:#2e5c4e; color:white; border-color:#2e5c4e; font-weight:550 }
+button:hover { background:#23483c }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline:2px solid #86643a; outline-offset:3px }
+button:disabled { background:#eee; color:#676c68; border-color:#d4d7d2 }
+.home-main { padding-top:2.4rem; max-width:64rem }
+.home-intro { max-width:47rem }
+.home-intro h2 { font-weight:500; font-size:clamp(1.85rem,3.3vw,2.7rem); line-height:1.2; max-width:40rem }
+.home-intro p { font-size:1.06rem; color:#505b53; margin-top:1.15rem }
+.home-main > section + section { margin-top:2.6rem }
+.home-works { max-width:53rem; gap:1.3rem; margin-top:1.3rem }
+.home-works li { padding:1.4rem; border:1px solid #d4dcd3; border-top:3px solid #507262; border-radius:.55rem; background:#fffefa; box-shadow:0 3px 12px #26382b05 }
+.home-works h3 { font-size:1.8rem; margin-bottom:1.25rem }
+.home-works h3 a { text-decoration:none }
+.home-works label { color:#535e56; font-size:.95rem }
+.home-help { max-width:53rem }
+.home-help h2, .home-preview h2 { font-size:1.45rem; font-weight:500 }
+.home-help ul { padding-left:1.2rem }
+.home-help li { margin-block:.35rem }
+.home-help strong { color:#334f41; font-weight:600 }
+.home-preview { border-color:#d7dcd4; max-width:53rem; padding-top:1.6rem }
+.home-preview p:last-child { margin-top:1.4rem }
+footer { color:#606b62; font-size:.875rem; border-color:#d7dcd4; margin-top:1.3rem }
+#passage { margin-top:1rem; gap:1rem }
+#passage label { color:#536056; font-size:.95rem }
+header details { font-size:.9rem; margin-top:.7rem; color:#536458 }
+main { padding-top:2rem; gap:2rem }
+#heading { font-size:1.85rem; color:#304e40; margin-bottom:1.2rem }
+.verse { padding-block:.32rem; grid-template-columns:3.3rem 1fr }
+.verse-number { color:#7a8178; font-size:.8rem; font-variant-numeric:tabular-nums }
+.greek { font-size:1.35rem; line-height:1.8 }
+.token { color:inherit; font-weight:400; border-radius:.15rem; padding:0 .08em }
+.token:hover { background:#e9eee5; color:inherit }
+.token[aria-pressed=true] { background:#d7e5d8; color:#183c2b }
+aside { border:1px solid #d4dcd3; border-top:3px solid #507262; border-radius:.5rem; padding:1.35rem; background:#fffefa; max-height:min(32rem,calc(100vh - 2rem)); box-shadow:0 3px 12px #26382b05 }
+aside h2 { font-size:1.45rem; font-weight:500; color:#304e40 }
+#word p { margin-block:.6rem }
+#dictionary { border-color:#dde2d9; padding-top:.4rem }
+#dictionary h3 { font-size:1rem; color:#536458; font-weight:600 }
+#syntax { border-color:#d7dcd4; padding-top:1rem }
+#syntax h3 { font-family:Georgia,serif; font-size:1.35rem; font-weight:500; color:#304e40 }
+.diagram-scroll { border-color:#d4dcd3; border-radius:.4rem; background:#fffefa }
+@media(max-width:720px) { body { padding-inline:1rem } .home-main { padding-top:1.8rem } .home-works li { padding:1.15rem } aside { max-height:min(25rem,60vh) } }

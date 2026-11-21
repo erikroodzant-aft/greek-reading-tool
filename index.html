@@ -2,16 +2,23 @@
 <html lang="en">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Greek Reading Tool</title>
+<title>Heleios · A companion for reading ancient texts</title>
 <link rel="stylesheet" href="style.css">
 <script>
 if (new URLSearchParams(location.hash.slice(1)).has("work")) {
   location.replace("reader.html" + location.hash);
 }
 </script>
-<header><h1>Greek Reading Tool</h1></header>
+<body class="home-page">
+<header><h1>Heleios</h1><p class="site-tagline">A companion for reading ancient texts</p></header>
+<main class="home-main">
+<section class="home-intro" aria-labelledby="welcome">
+<h2 id="welcome">Read ancient texts with a little more insight.</h2>
+<p>Heleios brings Greek text, vocabulary, morphology, sentence diagrams, and grammar references together for students, teachers, and independent readers.</p>
+</section>
 <section aria-labelledby="works">
-<h2 id="works">Homer</h2>
+<h2 id="works">Read Homer</h2>
+<p>Click a title to begin at Book 1, line 1, or enter a passage below.</p>
 <ul class="home-works">
 <li>
 <h3><a href="reader.html#work=iliad&amp;book=1&amp;line=1">Iliad</a></h3>
@@ -31,23 +38,23 @@ if (new URLSearchParams(location.hash.slice(1)).has("work")) {
 </li>
 </ul>
 </section>
-<details id="meter-guide">
-<summary>Homeric meter guide</summary>
-<h2>Reading dactylic hexameter</h2>
-<p>Each verse has six feet. Feet 1–4 can be dactyls (<strong>– ⏑ ⏑</strong>, long–short–short) or spondees (<strong>– –</strong>, long–long). The fifth is usually a dactyl. The sixth ends <strong>– ×</strong>, where × can be long or short.</p>
-<h3>How to scan a line</h3>
-<ol>
-<li>Read across word boundaries. A foot may start or end inside a word.</li>
-<li>Mark syllables long by nature when they contain a long vowel or diphthong. A short vowel before two consonants usually gives a syllable long by position, even across words. A stop followed by a liquid can behave differently.</li>
-<li>Fit the syllables into six feet. An apostrophe can mark an elided vowel that contributes no syllable. Homer can also shorten a long vowel or diphthong before another vowel, or combine two vowel sounds into one syllable.</li>
-<li>Look for a <strong>caesura</strong>, a word break within a foot, often in the third foot. A word break at a foot boundary is a <strong>diaeresis</strong>.</li>
-</ol>
-<h3>Worked example · Iliad 1.1</h3>
-<p class="greek" lang="grc">μῆνιν ἄ | ειδε θε | ὰ ‖ Πη | ληϊά | δεω Ἀχι | λῆος</p>
-<p><strong>– ⏑ ⏑ | – ⏑ ⏑ | – ‖ – | – ⏑ ⏑ | – ⏑ ⏑ | – ×</strong></p>
-<p>The third foot crosses the word break after θεὰ (‖). In the fifth foot, εω in Πηληϊάδεω scans as one syllable (synizesis).</p>
-<p><a href="https://perseids-publications.github.io/harrington-trees/docs/harrington-greek-grammar-2016.pdf" target="_blank" rel="noopener">Harrington’s Greek Grammar · Dactylic Hexameter</a> includes worked examples from Odyssey 1.1–5.</p>
-</details>
-<footer><a href="smyth.html">Smyth grammar</a> · <a href="PROVENANCE.md">Data attribution and licenses</a></footer>
+<section class="home-help" aria-labelledby="getting-started">
+<h2 id="getting-started">How to use this reader</h2>
+<p>Use Heleios to support your own translation and close reading. Open a passage, read the Greek, and select words to explore their meanings and grammatical relationships.</p>
+<ul>
+<li><strong>Select a Greek word</strong> to explore its lemma, morphology, and dictionary entry.</li>
+<li><strong>Follow the sentence diagram</strong> to see subjects, verbs, objects, and links between related words, including across verse lines.</li>
+<li><strong>Explore the references</strong> with searchable <a href="smyth.html">Smyth grammar</a>. Text-specific resources are also included within the readers, where available.</li>
+</ul>
+</section>
+<section class="home-preview" aria-labelledby="preview-note">
+<h2 id="preview-note">About Heleios</h2>
+<p>Grammatical annotations can contain gaps or errors, and dictionary excerpts may need the context of the full entry. Use these aids alongside your own reading and judgment.</p>
+<p>Heleios owes a particular debt to the Perseus Digital Library and to the scholars and projects whose texts and reference works make this reader possible. It is an independent project and is not affiliated with the Perseus Digital Library.</p>
+<p>This reader is dedicated to my <span lang="grc">φίλοι</span>, Matthew and Ruth, without whom it would not exist.</p>
+</section>
+</main>
+<footer><a href="PROVENANCE.md">Data attribution and licenses</a> · <a href="https://github.com/erikroodzant-aft/greek-reading-tool/issues/new?template=report-problem.yml" target="_blank" rel="noopener">Report a problem on GitHub</a></footer>
 <script type="module" src="home.mjs"></script>
+</body>
 </html>
