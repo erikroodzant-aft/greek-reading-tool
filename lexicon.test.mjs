@@ -1,12 +1,11 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {atlasHeadword, lemmaKey, parseCunliffe, preview} from "./lexicon.mjs";
+import {atlasHeadword, lemmaKey, parseCunliffe} from "./lexicon.mjs";
 
-test("exact accent-preserving keys and a sourced Iliad preview", () => {
+test("exact accent-preserving dictionary keys", () => {
   assert.equal(lemmaKey(" ΜΗ͂ΝΙΣ "), "μῆνις");
   assert.notEqual(lemmaKey("εἰ"), lemmaKey("εἷ"));
   assert.equal(new URL(atlasHeadword("μῆνις")).hostname, "atlas.perseus.tufts.edu");
-  assert.match(preview.get("μῆνις").url, /cunliffe_lex-n6427/);
 });
 
 test("Scaife JSONL keeps multiple entries for the same headword", () => {

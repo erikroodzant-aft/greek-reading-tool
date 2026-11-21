@@ -5,6 +5,7 @@ import {createServer} from "node:http";
 import {resolve, extname} from "node:path";
 import {setTimeout as delay} from "node:timers/promises";
 
+if (!process.argv[2] || !process.argv[3]) throw new Error("Usage: node browser-test.mjs <Edge executable> <dedicated temporary profile directory>");
 const profile = process.argv[3];
 await mkdir(profile, {recursive: true});
 const server = createServer(async (req, res) => {
@@ -27,10 +28,13 @@ await new Promise((resolve, reject) => server.listen(0, "127.0.0.1", resolve).on
 const edge = spawn(process.argv[2], ["--headless=new", "--disable-gpu", "--no-first-run",
   "--remote-debugging-port=0", "--user-data-dir=" + await realpath(profile), "about:blank"],
   {windowsHide:true, stdio:"ignore"});
+let startupError;
+edge.on("error", error => { startupError = error; });
 let socket;
 try {
   let port;
   for (let i = 0; i < 60 && !port; i++) {
+    if (startupError) throw startupError;
     await delay(250);
     port = (await readFile(resolve(profile, "DevToolsActivePort"), "utf8").catch(() => "")).split(/\r?\n/)[0];
   }
@@ -44,9 +48,11 @@ try {
   let id = 0;
   const call = (method, params) => new Promise((resolve, reject) => {
     const serial = ++id;
+    const timeout = setTimeout(() => { socket.removeEventListener("message", receive); reject(new Error("Browser command timed out: " + method)); }, 15000);
     function receive(event) {
       const message = JSON.parse(event.data);
       if (message.id !== serial) return;
+      clearTimeout(timeout);
       socket.removeEventListener("message", receive);
       if (message.error) reject(new Error(message.error.message));
       else resolve(message.result);

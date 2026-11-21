@@ -30,12 +30,6 @@ export function entryUrl(urn) {
   return "https://atlas.perseus.tufts.edu/dictionaries/entry/" + encodeURIComponent(urn) + "/";
 }
 
-export const preview = new Map([
-  ["μῆνις", {gloss:"Wrath or anger; also the effect of wrath.",
-    url:entryUrl("urn:cite2:scaife-viewer:dictionaries.v1:cunliffe_lex-n6427")}],
-  ["ἀείδω", {gloss:"To sing.",
-    url:atlasHeadword("ἀείδω")}]
-]);
 
 
 export function entryPreview(definition, limit = 220) {

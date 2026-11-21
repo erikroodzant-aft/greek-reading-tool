@@ -39,3 +39,5 @@ label { display:inline-flex; flex-wrap:wrap; gap:.4rem; align-items:center }
 .smyth-number { color:#285c4c }
 td { border-color:#d4dcd3 }
 section:target, [id^="homer-example-"]:target { background:#e9eee5; outline-color:#507262 }
+
+#search-results[hidden], #search-results li[hidden] { display: none }

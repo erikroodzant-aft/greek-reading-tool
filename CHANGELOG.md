@@ -1,5 +1,12 @@
 # Change history
 
+## Unreleased
+
+- Added reproducible packages with commit/content manifests, packaged-file checks and a prepared validation-gated Pages workflow (activation pending).
+- Hid empty Smyth results, clarified book-load retry guidance, removed obsolete grammar/dictionary helpers and corrected stale provenance text.
+
+- Clarified the homepage passage controls and revised the Smyth grammar guidance.
+
 ## Heleios branding and design — 2026-11-21
 - Applied the approved warm background and green palette, refined headings, controls, spacing and panels across the homepage, reader and Smyth.
 - Added a homepage problem-report link and a structured GitHub issue form; reports require a GitHub account and are public.

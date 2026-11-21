@@ -1,0 +1,9 @@
+{
+  "files": [
+    ".nojekyll", "CNAME", ".gitignore", "README.md", "CONTRIBUTING.md", "CHANGELOG.md", "BACKLOG.md", "PROVENANCE.md", "VALIDATION.md",
+    "index.html", "reader.html", "smyth.html", "style.css", "smyth.css", "home.mjs", "reader.mjs", "diagram.mjs", "graph.mjs", "grammar.mjs", "lexicon.mjs", "smyth.mjs", "smyth-book.mjs", "smyth-search.mjs",
+    "serve_reader.py", "start-reader.cmd", "convert.py", "validate.py", "build_smyth.py", "check_release.py", "package_release.py", "release-files.json", "RELEASE-CHECKLIST.md",
+    "graph.test.mjs", "grammar.test.mjs", "lexicon.test.mjs", "smyth.test.mjs", "smyth-search.test.mjs", "reader-errors.mjs", "reader-errors.test.mjs", "browser-test.mjs"
+  ],
+  "directories": ["data", ".github"]
+}

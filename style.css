@@ -39,7 +39,6 @@ ul { padding-inline-start: 1.1rem }
 .diagram { position: relative }
 .diagram svg { display: block }
 .diagram path { fill: none; stroke: #776e62; stroke-width: 1.15 }
-.diagram path.active { stroke: #22674f; stroke-width: 2.25 }
 .diagram-words { display: flex; padding-left: 12px; text-align: center }
 .diagram-words a, .diagram-words small { display: block; font-size: .78rem }
 #syntax input[type=checkbox] { width: auto }
@@ -85,7 +84,6 @@ ul { padding-inline-start: 1.1rem }
 .home-intro { max-width: 46rem }
 .home-intro h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); line-height: 1.2; color: #315b51 }
 .home-intro p { max-width: 43rem }
-.preview-label { margin: 0 0 .7rem; font-size: .875rem; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: #525047 }
 .home-help { max-width: 48rem }
 .home-help li { margin-block: .65rem }
 .home-preview { max-width: 48rem; border-top: 1px solid #c8c1b4; padding-top: 1.25rem; color: #525047 }

@@ -13,8 +13,8 @@ The Perseus repository credits the Perseus Digital Library, Tufts University, co
 
 ## Remaining rights questions
 
-- Before public hosting, confirm the exact upstream revision corresponding to the two uploaded checksums and whether either XML file or its underlying digitized edition has an additional file-specific notice. The linked repository paths identify the upstream counterparts. Byte parity with a pinned revision was not checked.
-- Verify the license of each digital edition used for future Cunliffe, Smyth, commentary or meter integration, including attribution, jurisdiction, and compatibility with the intended distribution. Those resources are outside this package.
+- Still to verify: confirm the exact upstream revision corresponding to the two uploaded checksums and whether either XML file or its underlying digitized edition has an additional file-specific notice. The linked repository paths identify the upstream counterparts. Byte parity with a pinned revision was not checked.
+- Cunliffe and Smyth are bundled in this package under the source notices below. Future dictionary, grammar, commentary or meter sources require their own edition-specific permissions review. The richer Homerica Cunliffe XML is not included.
 
 ## Cunliffe dictionary
 

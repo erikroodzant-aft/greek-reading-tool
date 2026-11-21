@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import test from "node:test";
-import {agreement, contextualMorphology, coordinatedSubjectHead, nominalMorphology, nominativeSubjectLink, roleLabels, syntaxArrow, verbMorphology} from "./grammar.mjs";
+import {agreement, contextualMorphology, coordinatedSubjectHead, readableMorphology, nominativeSubjectLink, roleLabels, syntaxArrow, verbMorphology} from "./grammar.mjs";
 
 function sentence(work, id) {
   const data = JSON.parse(readFileSync(new URL("./data/" + work + "/1.json", import.meta.url)));
@@ -81,8 +81,8 @@ test("Iliad nominative attribute uses its source link without adding extra role 
   assert(!nominativeSubjectLink(words.get("45"), words.get("49")));
   assert.deepEqual(roleLabels(words.get("24")), ["Object complement"]);
   const adjective = words.get("40");
-  assert.equal(nominalMorphology(words.get("45").postag), "masculine, singular, nominative");
-  assert.equal(nominalMorphology(adjective.postag), "neuter, plural, accusative");
+  assert.equal(readableMorphology(words.get("45")), "Noun · masculine, singular, nominative");
+  assert.equal(readableMorphology(adjective), "Adjective · neuter, plural, accusative");
 });
 
 

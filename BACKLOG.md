@@ -42,3 +42,11 @@ Continue using the existing bundled Scaife database. Investigate systematic defi
 ## Immediate friend-preview release
 
 Prepare the existing desktop reader and offline references for GitHub. Verify the static files, tests, source notices and known limitations. Confirm the GitHub destination and whether the user wants GitHub Pages hosting. Mobile bottom-sheet interaction and the visual redesign remain later priorities.
+
+## November 21 code-quality review
+
+Review completed; detailed local report: outputs/Code-Quality-Review.txt. Next priorities: establish one editable source and repeatable packaging; add validation before deployment; repair the empty Smyth result panel and hosted load-error guidance; correct stale provenance/documentation. Keep performance work measurement-led. Review only; implementation and publication have not occurred.
+
+## Maintenance implementation — local, not published
+
+Single-source packaging, content manifests, static checks and the validation-gated Pages workflow are prepared. Empty Smyth results and hosted book-load guidance are fixed; obsolete test-only helpers removed; provenance corrected. Workflow activation and remote verification remain publication steps. Physical-phone measurements remain pending; no performance claim is based on viewport emulation. Full CSS consolidation is deferred to avoid changing approved visuals without a separate visual regression pass.

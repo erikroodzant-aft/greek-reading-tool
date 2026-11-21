@@ -22,7 +22,7 @@ Open http://127.0.0.1:8765/ and keep the terminal running while reading.
 - Exact dictionary headword matching leaves some lemmas unmatched.
 - Greek text and grammatical annotations preserve known gaps and anomalies in the supplied treebank.
 - The phone layout supports a stacked word panel; a dedicated bottom-sheet interaction remains in the backlog.
-- All 28 automated tests pass. Browser checks cover homepage navigation, line limits, word analysis, dictionary loading and Smyth search at desktop and phone-sized widths; testing on physical mobile devices remains pending.
+- All 29 automated tests pass. Browser checks cover homepage navigation, line limits, word analysis, dictionary loading and Smyth search at desktop and phone-sized widths; testing on physical mobile devices remains pending.
 
 ## Sources and permissions
 
@@ -31,6 +31,8 @@ See [PROVENANCE.md](PROVENANCE.md) for edition credits, licenses and remaining s
 No blanket license for the application code has been selected by the project owner.
 
 ## Checks
+
+This checkout is the editable source. Build checked packages with `python package_release.py --output ..`; see [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md). Generated folders are not independent working copies.
 
 Run `node --test *.test.mjs` with a current Node installation. The corpus conversion can additionally be checked against the original XML inputs with `validate.py`.
 

@@ -1,3 +1,4 @@
+import {bookLoadMessage} from "./reader-errors.mjs";
 import {searchSmyth, smythForWord} from "./smyth.mjs";
 import {atlasHeadword, entryUrl, lemmaKey, parseCunliffe, entryPreview} from "./lexicon.mjs";
 import {agreement, readableMorphology, readableRelation} from "./grammar.mjs";
@@ -328,7 +329,7 @@ async function load() {
     state = {...location, data: cached.data};
     render(state);
   } catch (error) {
-    if (sequence === request) $("status").textContent = "Could not load this book. Open the reader through the local server. " + error.message;
+    if (sequence === request) $("status").textContent = bookLoadMessage(window.location.protocol);
   }
 }
 

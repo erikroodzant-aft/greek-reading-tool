@@ -10,6 +10,8 @@ more.textContent = "More results";
 more.hidden = true;
 const moreItem = document.createElement("li");
 moreItem.className = "more-results";
+moreItem.hidden = true;
+$("search-results").hidden = true;
 moreItem.append(more);
 $("search-results").append(moreItem);
 const metadata = document.createElement("p");
@@ -46,6 +48,8 @@ function appendResults() {
   }
   shown = Math.min(results.length,shown+20);
   more.hidden = shown >= results.length;
+  moreItem.hidden = more.hidden;
+  $("search-results").hidden = results.length === 0;
 }
 more.onclick = appendResults;
 
@@ -54,6 +58,8 @@ $("text-search").onsubmit = async event => {
   const request = ++sequence;
   $("search-results").replaceChildren(moreItem);
   more.hidden = true;
+  moreItem.hidden = true;
+  $("search-results").hidden = true;
   $("search-status").textContent = "Searching…";
   try {
     indexRequest ??= fetch("data/smyth-search.json").then(response => {

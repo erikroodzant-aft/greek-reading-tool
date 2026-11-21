@@ -78,11 +78,6 @@ export function syntaxArrow(word, head, showAdditional) {
   return showAdditional ? {from: head.id, to: word.id, kind: "context", label: readableRelation(word)} : null;
 }
 
-export function nominalMorphology(tag) {
-  if (!/^[nalp]/u.test(tag ?? "")) return "";
-  return [gender, number, grammaticalCase].map(([index, values]) =>
-    values[tag[index]] ?? "unspecified").join(", ");
-}
 
 export function nominativeSubjectLink(word, head) {
   return word.postag?.[7] === "n" && relation(word) === "ATR" &&

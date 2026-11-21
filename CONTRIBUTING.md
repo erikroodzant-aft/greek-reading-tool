@@ -1,4 +1,6 @@
-# Updating the Heleios
+# Updating Heleios
+
+Use this Git checkout as the single editable source. Build the extracted folder and stable ZIPs with `package_release.py`; do not maintain manual copies. See [RELEASE-CHECKLIST.md](RELEASE-CHECKLIST.md) for packaging, browser checks and the pending validation-gated deployment setup.
 
 The public website is deployed automatically from the repository's `main` branch. Keep `main` ready for readers.
 
