@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greek Reading Tool</title>
+<link rel="stylesheet" href="style.css">
+<script>
+if (new URLSearchParams(location.hash.slice(1)).has("work")) {
+  location.replace("reader.html" + location.hash);
+}
+</script>
+<header><h1>Greek Reading Tool</h1></header>
+<section aria-labelledby="works">
+<h2 id="works">Homer</h2>
+<ul class="home-works">
+<li>
+<h3><a href="reader.html#work=iliad&amp;book=1&amp;line=1">Iliad</a></h3>
+<form action="reader.html" data-work="iliad" aria-label="Go to a passage in the Iliad">
+<label>Book <select name="book"></select></label>
+<label>Line <input name="line" type="text" inputmode="numeric" pattern="[0-9]+" required value="1"></label>
+<button>Go</button>
+</form>
+</li>
+<li>
+<h3><a href="reader.html#work=odyssey&amp;book=1&amp;line=1">Odyssey</a></h3>
+<form action="reader.html" data-work="odyssey" aria-label="Go to a passage in the Odyssey">
+<label>Book <select name="book"></select></label>
+<label>Line <input name="line" type="text" inputmode="numeric" pattern="[0-9]+" required value="1"></label>
+<button>Go</button>
+</form>
+</li>
+</ul>
+</section>
+<details id="meter-guide">
+<summary>Homeric meter guide</summary>
+<h2>Reading dactylic hexameter</h2>
+<p>Each verse has six feet. Feet 1–4 can be dactyls (<strong>– ⏑ ⏑</strong>, long–short–short) or spondees (<strong>– –</strong>, long–long). The fifth is usually a dactyl. The sixth ends <strong>– ×</strong>, where × can be long or short.</p>
+<h3>How to scan a line</h3>
+<ol>
+<li>Read across word boundaries. A foot may start or end inside a word.</li>
+<li>Mark syllables long by nature when they contain a long vowel or diphthong. A short vowel before two consonants usually gives a syllable long by position, even across words. A stop followed by a liquid can behave differently.</li>
+<li>Fit the syllables into six feet. An apostrophe can mark an elided vowel that contributes no syllable. Homer can also shorten a long vowel or diphthong before another vowel, or combine two vowel sounds into one syllable.</li>
+<li>Look for a <strong>caesura</strong>, a word break within a foot, often in the third foot. A word break at a foot boundary is a <strong>diaeresis</strong>.</li>
+</ol>
+<h3>Worked example · Iliad 1.1</h3>
+<p class="greek" lang="grc">μῆνιν ἄ | ειδε θε | ὰ ‖ Πη | ληϊά | δεω Ἀχι | λῆος</p>
+<p><strong>– ⏑ ⏑ | – ⏑ ⏑ | – ‖ – | – ⏑ ⏑ | – ⏑ ⏑ | – ×</strong></p>
+<p>The third foot crosses the word break after θεὰ (‖). In the fifth foot, εω in Πηληϊάδεω scans as one syllable (synizesis).</p>
+<p><a href="https://perseids-publications.github.io/harrington-trees/docs/harrington-greek-grammar-2016.pdf" target="_blank" rel="noopener">Harrington’s Greek Grammar · Dactylic Hexameter</a> includes worked examples from Odyssey 1.1–5.</p>
+</details>
+<footer><a href="smyth.html">Smyth grammar</a> · <a href="PROVENANCE.md">Data attribution and licenses</a></footer>
+<script type="module" src="home.mjs"></script>
+</html>

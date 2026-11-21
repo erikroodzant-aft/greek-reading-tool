@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Greek Reading Tool</title>
+<link rel="stylesheet" href="style.css">
+<header><h1><a class="reader-title" href="index.html">Greek Reading Tool</a></h1>
+<form id="passage">
+<label>Work <select id="work"><option value="iliad">Iliad</option><option value="odyssey">Odyssey</option></select></label>
+<label>Book <select id="book"></select></label>
+<label>Line <input id="line" type="text" inputmode="numeric" pattern="[0-9]+" required value="1"></label>
+<button>Go</button>
+</form>
+<details id="grammar-reference">
+<summary>Smyth grammar reference</summary>
+<p><a href="smyth.html" target="_blank" rel="noopener">Open the full offline grammar</a></p>
+<label for="smyth-search">Search topics or section numbers</label>
+<input id="smyth-search" type="search">
+<ul id="smyth-results"></ul>
+</details>
+<details id="meter-guide">
+<summary>Homeric meter guide</summary>
+<h2>Reading dactylic hexameter</h2>
+<p>Each verse has six feet. Feet 1–4 can be dactyls (<strong>– ⏑ ⏑</strong>, long–short–short) or spondees (<strong>– –</strong>, long–long). The fifth is usually a dactyl. The sixth ends <strong>– ×</strong>, where × can be long or short.</p>
+<h3>How to scan a line</h3>
+<ol>
+<li>Read across word boundaries. A foot may start or end inside a word.</li>
+<li>Mark syllables long by nature when they contain a long vowel or diphthong. A short vowel before two consonants usually gives a syllable long by position, even across words. A stop followed by a liquid can behave differently.</li>
+<li>Fit the syllables into six feet. An apostrophe can mark an elided vowel that contributes no syllable. Homer can also shorten a long vowel or diphthong before another vowel, or combine two vowel sounds into one syllable.</li>
+<li>Look for a <strong>caesura</strong>, a word break within a foot, often in the third foot. A word break at a foot boundary is a <strong>diaeresis</strong>.</li>
+</ol>
+<h3>Worked example · Iliad 1.1</h3>
+<p class="greek" lang="grc">μῆνιν ἄ | ειδε θε | ὰ ‖ Πη | ληϊά | δεω Ἀχι | λῆος</p>
+<p><strong>– ⏑ ⏑ | – ⏑ ⏑ | – ‖ – | – ⏑ ⏑ | – ⏑ ⏑ | – ×</strong></p>
+<p>The third foot crosses the word break after θεὰ (‖). In the fifth foot, εω in Πηληϊάδεω scans as one syllable (synizesis).</p>
+<p><a href="https://perseids-publications.github.io/harrington-trees/docs/harrington-greek-grammar-2016.pdf" target="_blank" rel="noopener">Harrington’s Greek Grammar · Dactylic Hexameter</a> includes worked examples from Odyssey 1.1–5.</p>
+</details>
+</header>
+<main>
+<section aria-labelledby="heading"><h2 id="heading">Homer</h2>
+<p id="status" role="status"></p>
+<div id="verses"></div>
+<details id="homer-citations" hidden>
+<summary>Smyth citations for these verses</summary>
+<ul id="homer-citation-list"></ul>
+</details>
+<nav aria-label="Passage pages"><button id="previous">Previous lines</button><button id="next">Next lines</button></nav>
+<details id="unplaced"><summary>Words and punctuation with uncertain verse locations</summary>
+<p>These AGDT segments contain a token with multiple verse citations, a book-only citation, or no verse citation or reliable punctuation placement. Choose a segment to see those tokens in context.</p>
+<label>AGDT segment <select id="uncertain"></select></label><button id="inspect">Inspect segment</button></details>
+</section>
+<aside aria-labelledby="analysis">
+<h2 id="analysis" tabindex="-1">Word &amp; morphology</h2>
+<div id="word" aria-live="polite">Select a Greek word to inspect its morphology and dependencies.</div>
+
+<div id="dictionary"></div>
+<div id="smyth-context"></div>
+</aside>
+<section id="syntax" aria-label="Dependency diagram"></section>
+</main>
+<footer><a href="PROVENANCE.md">Data attribution and license</a> · <a href="data/audit.json">Corpus audit (JSON)</a> · <a href="VALIDATION.md">Validation report</a></footer>
+<script type="module" src="reader.mjs"></script>
+</html>
+

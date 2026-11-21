@@ -1,0 +1,78 @@
+* { box-sizing: border-box }
+body { margin: 0 auto; max-width: 88rem; padding: 1.25rem clamp(1rem, 4vw, 4rem); background: #f6f3ec; color: #292823; font: 1rem/1.5 system-ui, sans-serif }
+header, footer { border-block-end: 1px solid #c8c1b4; padding-block: 0.7rem }
+h1, h2 { font-family: Georgia, serif; margin: 0 0 .7rem }
+h1 { font-size: clamp(1.8rem, 4vw, 2.7rem) }
+form, nav { display: flex; flex-wrap: wrap; gap: .7rem; align-items: end }
+label { display: inline-flex; align-items: center; gap: .35rem }
+input, select, button { font: inherit; color: inherit; border: 1px solid #8e8879; border-radius: .25rem; background: #fffdfa; padding: .25rem .5rem }
+input { width: 5.4rem }
+button { cursor: pointer }
+button:disabled { opacity: .5; cursor: default }
+a { color: #315b51 }
+main { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(17rem, 1fr); gap: clamp(1rem, 4vw, 3rem); padding-block: 1.5rem }
+aside { position: sticky; top: 1rem; align-self: start; max-height: min(28rem, calc(100vh - 2rem)); overflow-y: auto; border: 1px solid #c8c1b4; border-top: 4px solid #315b51; padding: 1rem; background: #fffdfa }
+.verse { display: grid; grid-template-columns: 3.5rem 1fr; align-items: baseline; padding: .18rem 0 }
+.verse-number, small { font-size: .85rem; color: #525047 }
+.verse-number[aria-current] { font-weight: bold }
+.greek { font: 1.25rem/1.65 Georgia, serif; overflow-wrap: anywhere }
+.token { border: 0; padding: 0 .08em; background: transparent; border-radius: 0 }
+.token:hover, .token:focus-visible { text-decoration: underline }
+.token[aria-pressed=true] { background: #c9e2d8 }
+.dependent { background: #e2ede6 }
+summary { cursor: pointer }
+details, nav { margin-top: 1rem }
+ul { padding-inline-start: 1.1rem }
+#syntax li { margin-block: .2rem }
+#word p { margin: .35rem 0 }
+#status:empty { display: none }
+@media (max-width: 720px) {
+  main { grid-template-columns: minmax(0, 1fr) }
+  aside { position: static; max-height: min(22rem, 55vh) }
+}
+.greek { font-family: "Palatino Linotype", "Cambria", "Times New Roman", serif }
+#syntax:empty { display: none }
+#syntax { grid-column: 1 / -1; min-width: 0; border-top: 1px solid #c8c1b4 }
+#syntax h3 { margin-bottom: .3rem }
+#syntax p { margin-top: 0; font-size: .85rem }
+.diagram-scroll { overflow-x: auto; border: 1px solid #c8c1b4; background: #fffdfa; padding-bottom: .45rem }
+.diagram { position: relative }
+.diagram svg { display: block }
+.diagram path { fill: none; stroke: #776e62; stroke-width: 1.15 }
+.diagram path.active { stroke: #22674f; stroke-width: 2.25 }
+.diagram-words { display: flex; padding-left: 12px; text-align: center }
+.diagram-words a, .diagram-words small { display: block; font-size: .78rem }
+#syntax input[type=checkbox] { width: auto }
+.diagram-scroll { margin-top: .55rem }
+.diagram path.core { stroke: #354d65; stroke-width: 1.6 }
+.diagram path.agreement { stroke: #785329; stroke-dasharray: 4 3; stroke-width: 1.6 }
+.diagram path.context { stroke: #888 }
+.diagram path.active { stroke: #22674f; stroke-width: 2.4 }
+.diagram-words > div { flex: none }
+.diagram-words .role { width: fit-content; margin: .15rem auto; padding: 0 .25rem; border-radius: .2rem; font-weight: 650; background: #e3ece7 }
+.diagram-words .subject { background: #e1eaf4 }
+.diagram-words .object { background: #f1e4d9 }
+.diagram-words .agreement-label { color: #654620; padding-inline: .2rem; overflow-wrap: anywhere }
+.diagram-words .roles { height: 2.9rem; display: flex; flex-direction: column; justify-content: end; align-items: center }
+.diagram-words .vocative { background: #eee8f2 }
+
+
+.diagram path.tag-mismatch { stroke: #785329; stroke-dasharray: 1 3; stroke-linecap: round; stroke-width: 1.8 }
+
+.diagram path.subject-attribute { stroke: #596a80; stroke-dasharray: 1 3; stroke-linecap: round; stroke-width: 1.8 }
+#dictionary:empty { display: none }
+#dictionary { border-top: 1px solid #c8c1b4; margin-top: .8rem }
+#dictionary h3 { margin: .6rem 0 .25rem }
+#dictionary p { margin: .3rem 0 }
+#smyth-search { width: min(100%, 18rem) }
+#smyth-context:empty { display: none }
+#smyth-context { margin-top: .8rem; border-top: 1px solid #c8c1b4 }
+
+.home-works { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: 1rem; max-width: 48rem }
+.home-works li { padding: 1rem; border: 1px solid #c8c1b4; border-radius: .35rem; background: #fffdfa }
+.home-works h3 { margin: 0 0 .8rem; font: 1.5rem Georgia, serif }
+
+.reader-title { color: inherit; text-decoration: none }
+.reader-title:focus-visible { outline: 2px solid #315b51; outline-offset: 4px }
+
+

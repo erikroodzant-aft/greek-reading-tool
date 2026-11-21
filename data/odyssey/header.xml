@@ -1,0 +1,133 @@
+<header>
+    <releaseDate>25 September 2015</releaseDate>
+    <annotationDate>Mon Oct 04 11:29:02 EDT 2010</annotationDate>
+    <annotationScheme>Guidelines for the syntactic annotation of the Ancient Greek dependency treebank 1.1</annotationScheme>
+    <fileDesc>
+      <editionStmt>
+        <respStmt>
+          <persName>Giuseppe G. A. Celano</persName>
+          <resp>release editor: post-annotation normalization and harmonization</resp>
+          <address>Leipzig University</address>
+        </respStmt>
+        <respStmt>
+          <persName>Gregory R. Crane</persName>
+          <resp>supervisor</resp>
+          <address>Leipzig University and Tufts University</address>
+        </respStmt>
+        <respStmt>
+          <persName>Bridget Almas</persName>
+          <resp>responsible for the annotation environment and cts:urn technology</resp>
+          <address>Tufts University</address>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>alexlessie</short>
+            <name>Alex Lessie</name>
+            <address>University of Pennsylvania, Philadelphia, PA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>dlliba10</short>
+            <name>Daniel Lim Libatique</name>
+            <address>College of the Holy Cross, Worcester, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>florinleonte</short>
+            <name>Florin Leonte</name>
+            <address>Central European University of Budapest, Hungary</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>jackmitchell</short>
+            <name>Jack Mitchell</name>
+            <address>Tufts University, Medford, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>jfg</short>
+            <name>J. F. Gentile</name>
+            <address>University of Pennsylvania, Philadelphia, PA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>jlnord</short>
+            <name>Jessica Nord</name>
+            <address>College of the Holy Cross, Worcester, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>megluthin</short>
+            <name>Meg Luthin</name>
+            <address>Tufts University, Medford, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>millermo</short>
+            <name>Molly Miller</name>
+            <address>Tufts University, Medford, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>nicanor</short>
+            <name>Jack Mitchell</name>
+            <address>Tufts University, Medford, MA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>tonyy8s</short>
+            <name>Anthony D. Yates</name>
+            <address>University of Georgia, Athens, GA, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+        <respStmt>
+          <persName>
+            <short>tovahk</short>
+            <name>Tovah Keynton</name>
+            <address>University of California, Berkeley, USA</address>
+          </persName>
+          <resp>annotator of the text</resp>
+        </respStmt>
+      </editionStmt>
+      <biblStruct>
+        <monogr>
+          <author>Homer</author>
+          <title>The Odyssey with an English Translation by A.T. Murray, PH.D. in two volumes</title>
+          <imprint>
+            <publisher>Cambridge, MA., Harvard University Press; London, William Heinemann, Ltd.</publisher>
+            <date>1919</date>
+          </imprint>
+        </monogr>
+      </biblStruct>
+    </fileDesc>
+    <encodingDesc xml:space="preserve">
+    The unannotated text comes from the digital edition of the text specified in the element monogr. 
+    The digital edition can be consulted on PerseusDL (https://github.com/PerseusDL/canonical-greekLit),
+    looking up the cts:urn. The annotator(s) may have chosen different variants for the text. 
+    </encodingDesc>
+    <profileDesc xml:space="preserve">
+    Consult the file README.xml for the details concerning normalization and harmonization of the text, 
+    and the file TAGSETS.xml for the meaning of the labels used in the annotation. The treebanked text before normalization 
+    and harmonization can be consulted on PerseusDL (https://github.com/PerseusDL/treebank_data/tree/master/v1.6).
+    </profileDesc>
+  </header>
+  
