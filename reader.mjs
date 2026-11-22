@@ -1,6 +1,6 @@
 import {bookLoadMessage} from "./reader-errors.mjs";
 import {searchSmyth, smythForWord} from "./smyth.mjs";
-import {atlasHeadword, entryUrl, lemmaKey, parseCunliffe, entryPreview} from "./lexicon.mjs";
+import {atlasHeadword, entryUrl, lemmaKey, parseCunliffe, entryPreview, referenceTree, referenceLabel} from "./lexicon.mjs";
 import {agreement, readableMorphology, readableRelation} from "./grammar.mjs";
 import {drawDiagram} from "./diagram.mjs";
 import {buildGraph, descendants, displayGreek, verseRef} from "./graph.mjs";
@@ -90,8 +90,41 @@ function renderSmythContext(word) {
   const details = text("details", "", panel);
   text("summary", "Smyth grammar references", details);
   renderSmythLinks(text("ul", "", details), topics);
+  if (topics.some(topic => topic.kind !== "citation")) text("em", "General guidance based on the recorded form or relationship; these links do not identify a specific use in this passage.", text("p", "", details));
   if (topics.some(topic => topic.id === "motion")) {
     text("p", "Smyth cites this very phrase from Iliad 1.3 in § 1475.", details);
+  }
+}
+
+function dictionaryText(definition) {
+  const template = document.createElement("template");
+  template.innerHTML = typeof definition === "string" ? definition.trim() : "";
+  for (const node of template.content.querySelectorAll("script, style")) node.remove();
+  return template.content.textContent.trim();
+}
+
+function renderReferences(entry, links, parent) {
+  for (const link of links) {
+    const target = link.target;
+    if (link.stop) {
+      text("p", link.stop === "cycle"
+        ? `The reference points back to ${target.headword}, already shown above. No further expansion is needed.`
+        : `Further expansion stops here to keep the reference path manageable. You can open ${target.headword} on Scaife ATLAS.`, parent);
+      if (link.stop === "limit") externalLink(parent, "Full entry on Scaife ATLAS", entryUrl(target.urn));
+      continue;
+    }
+    const reference = text("details", "", parent);
+    reference.className = "dictionary-reference";
+    reference.dataset.sourceUrn = entry.urn;
+    reference.dataset.targetUrn = target.urn;
+    text("summary", referenceLabel(link), reference);
+    text("h4", target.headword, reference).lang = "grc";
+    if (link.kind === "equals" && link.sense) {
+      text("p", `The original entry specifies sense ${link.sense}. The full referenced entry is shown; no meaning has been selected for this passage.`, reference);
+    }
+    text("p", dictionaryText(target.definition), reference);
+    externalLink(reference, "Referenced entry on Scaife ATLAS", entryUrl(target.urn));
+    renderReferences(target, link.children, reference);
   }
 }
 
@@ -113,23 +146,23 @@ function renderDictionary(lemma, selected = lexicalWordSelected) {
   for (const entry of entries) {
     const heading = text("h4", entry.headword, panel);
     heading.lang = "grc";
-    const definition = typeof entry.definition === "string" ? entry.definition.trim() : "";
-    const template = document.createElement("template");
-    template.innerHTML = definition;
-    for (const node of template.content.querySelectorAll("script, style")) node.remove();
-    const original = template.content.textContent.trim();
+    const original = dictionaryText(entry.definition);
+    let emptyExcerpt = false;
     if (original) {
       const preview = entryPreview(original);
-      text("small", preview.type, panel);
-      text("p", preview.text + (preview.truncated ? "…" : ""), panel);
+      emptyExcerpt = !preview.text;
+      if (!emptyExcerpt) {
+        text("small", preview.type, panel);
+        text("p", preview.text + (preview.truncated ? "…" : ""), panel);
+      }
     } else {
       text("p", "This entry has no definition text.", panel);
     }
     const details = text("details", "", panel);
-    text("summary", "Full Cunliffe entry", details);
+    text("summary", emptyExcerpt ? "Open the full entry" : "Full Cunliffe entry", details);
     if (original) text("p", original, details);
     externalLink(details, "Full entry on Scaife ATLAS", entryUrl(entry.urn));
-
+    renderReferences(entry, referenceTree(entry, dictionary), panel);
   }
   if (!dictionary && !dictionaryFailed) {
     text("p", "Loading dictionary…", panel);

@@ -1,5 +1,15 @@
 # Development backlog
 
+## More specific Smyth references from word morphology — requested November 22, 2026
+
+Improve the references offered in Word & morphology beyond broad headings such as “verbs.” Use recorded morphology to suggest relevant Smyth sections for a verb's tense, voice and mood, and for a noun's case (for example, a genitive heading when the selected noun is genitive). Extend to other relevant inflected word classes where appropriate.
+
+- Review the existing mappings systematically and validate section targets against the bundled Smyth text.
+- Present morphology-based grammar guidance separately from citations that actually discuss the selected Homeric passage.
+- Do not infer a particular case function or verbal usage from morphology alone; a genitive form supports general genitive guidance, not an unverified specific type of genitive.
+- Track representative examples for each supported tense, voice, mood and case, including combinations and missing/uncertain morphology. Keep the offline experience.
+- Implemented locally: all recorded oblique/vocative cases, selected moods, dual, infinitives, participles, preposition guidance and all seven recorded verb tenses. Tense/aspect destinations distinguish indicative from other verbal forms. Explicit middle or passive analyses receive general voice guidance; shared middle/passive tags are not resolved. Nominative, indicative mood, singular/plural, person, gender and active voice do not add routine links. General guidance and the explicit passage-citation note remain distinct in the flat link list. Publication pending.
+
 ## Completed: heleios.org domain verification and HTTPS
 
 Completion verified November 21, 2026: GitHub ownership verification succeeded; Enforce HTTPS enabled; https://heleios.org loads without a security warning; www redirects to the secure apex; the previously shared GitHub Iliad 1.1 link redirects to the secure reader and loads Book 1. Historical setup notes follow.
