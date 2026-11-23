@@ -1,5 +1,13 @@
 # Change history
 
+## Reader reference layout — 2026-11-23
+
+- Moved the Homeric meter guide immediately above uncertain verse locations. Replaced the conditional passage-citation dropdown with an always-available “Smyth’s Greek Grammar” panel containing a full-grammar link and a citation list only when references exist.
+
+- Matched the meter guide's introductory heading to its other subheadings. Changed the full-grammar link label to “Open the full grammar” and removed obsolete wording and documentation for the reader's former topic-search controls.
+
+- Removed the reader's top Smyth topic-search dropdown and its obsolete initialization. Added a consistent footer link to the full Smyth grammar on the homepage, reader and grammar page. Word-specific links and full grammar search remain available.
+
 ## Cunliffe references and Smyth word guidance — 2026-11-22
 
 - Added guidance for all seven recorded verb tenses, with form-specific tense/aspect destinations for subjunctives, optatives, imperatives, infinitives and participles. Explicit middle/passive analyses receive their respective general voice guidance; shared middle/passive tags are not resolved. Active voice does not add a routine link.

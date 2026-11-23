@@ -7,7 +7,7 @@ Improve the references offered in Word & morphology beyond broad headings such a
 - Review the existing mappings systematically and validate section targets against the bundled Smyth text.
 - Present morphology-based grammar guidance separately from citations that actually discuss the selected Homeric passage.
 - Do not infer a particular case function or verbal usage from morphology alone; a genitive form supports general genitive guidance, not an unverified specific type of genitive.
-- Track representative examples for each supported tense, voice, mood and case, including combinations and missing/uncertain morphology. Keep the offline experience.
+- Track representative examples for each supported tense, voice, mood and case, including combinations and missing/uncertain morphology. Keep the references bundled with the reader.
 - Implemented locally: all recorded oblique/vocative cases, selected moods, dual, infinitives, participles, preposition guidance and all seven recorded verb tenses. Tense/aspect destinations distinguish indicative from other verbal forms. Explicit middle or passive analyses receive general voice guidance; shared middle/passive tags are not resolved. Nominative, indicative mood, singular/plural, person, gender and active voice do not add routine links. General guidance and the explicit passage-citation note remain distinct in the flat link list. Publication pending.
 
 ## Completed: heleios.org domain verification and HTTPS
@@ -51,7 +51,7 @@ Continue using the existing bundled Scaife database. Investigate systematic defi
 
 ## Immediate friend-preview release
 
-Prepare the existing desktop reader and offline references for GitHub. Verify the static files, tests, source notices and known limitations. Confirm the GitHub destination and whether the user wants GitHub Pages hosting. Mobile bottom-sheet interaction and the visual redesign remain later priorities.
+Prepare the existing desktop reader and bundled references for GitHub. Verify the static files, tests, source notices and known limitations. Confirm the GitHub destination and whether the user wants GitHub Pages hosting. Mobile bottom-sheet interaction and the visual redesign remain later priorities.
 
 ## November 21 code-quality review
 

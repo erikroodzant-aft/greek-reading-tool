@@ -29,16 +29,25 @@
 <label>Line <input id="line" type="text" inputmode="numeric" pattern="[0-9]+" required value="1"></label>
 <button>Go</button>
 </form>
-<details id="grammar-reference">
-<summary>Smyth grammar reference</summary>
-<p><a href="smyth.html" target="_blank" rel="noopener">Open the full offline grammar</a></p>
-<label for="smyth-search">Search topics or section numbers</label>
-<input id="smyth-search" type="search">
-<ul id="smyth-results"></ul>
+
+</header>
+<main>
+<section aria-labelledby="heading"><h2 id="heading">Homer</h2>
+<p id="status" role="status"></p>
+<div id="verses"></div>
+<details id="homer-citations">
+<summary>Smyth’s Greek Grammar</summary>
+<p><a href="smyth.html" target="_blank" rel="noopener">Open the full grammar</a></p>
+<div id="homer-citation-results" hidden>
+<h3>Citations for these verses</h3>
+<ul id="homer-citation-list"></ul>
+</div>
+<p id="homer-citation-status" role="status"></p>
 </details>
+<nav aria-label="Passage pages"><button id="previous">Previous lines</button><button id="next">Next lines</button></nav>
 <details id="meter-guide">
 <summary>Homeric meter guide</summary>
-<h2>Reading dactylic hexameter</h2>
+<h3>Reading dactylic hexameter</h3>
 <p>Each verse has six feet. Feet 1–4 can be dactyls (<strong>– ⏑ ⏑</strong>, long–short–short) or spondees (<strong>– –</strong>, long–long). The fifth is usually a dactyl. The sixth ends <strong>– ×</strong>, where × can be long or short.</p>
 <h3>How to scan a line</h3>
 <ol>
@@ -53,16 +62,6 @@
 <p>The third foot crosses the word break after θεὰ (‖). In the fifth foot, εω in Πηληϊάδεω scans as one syllable (synizesis).</p>
 <p><a href="https://perseids-publications.github.io/harrington-trees/docs/harrington-greek-grammar-2016.pdf" target="_blank" rel="noopener">Harrington’s Greek Grammar · Dactylic Hexameter</a> includes worked examples from Odyssey 1.1–5.</p>
 </details>
-</header>
-<main>
-<section aria-labelledby="heading"><h2 id="heading">Homer</h2>
-<p id="status" role="status"></p>
-<div id="verses"></div>
-<details id="homer-citations" hidden>
-<summary>Smyth citations for these verses</summary>
-<ul id="homer-citation-list"></ul>
-</details>
-<nav aria-label="Passage pages"><button id="previous">Previous lines</button><button id="next">Next lines</button></nav>
 <details id="unplaced"><summary>Words and punctuation with uncertain verse locations</summary>
 <p>These AGDT segments contain a token with multiple verse citations, a book-only citation, or no verse citation or reliable punctuation placement. Choose a segment to see those tokens in context.</p>
 <label>AGDT segment <select id="uncertain"></select></label><button id="inspect">Inspect segment</button></details>
@@ -76,7 +75,7 @@
 </aside>
 <section id="syntax" aria-label="Dependency diagram"></section>
 </main>
-<footer><a href="PROVENANCE.md">Data attribution and license</a> · <a href="data/audit.json">Corpus audit (JSON)</a> · <a href="VALIDATION.md">Validation report</a></footer>
+<footer><a href="smyth.html" target="_blank" rel="noopener">Open the full grammar</a> · <a href="PROVENANCE.md">Data attribution and license</a> · <a href="data/audit.json">Corpus audit (JSON)</a> · <a href="VALIDATION.md">Validation report</a></footer>
 <script type="module" src="reader.mjs"></script>
 </html>
 

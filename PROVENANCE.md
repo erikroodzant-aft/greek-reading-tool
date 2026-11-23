@@ -24,7 +24,7 @@ Richard John Cunliffe, *A Lexicon of the Homeric Dialect* (1924). The bundled Sc
 - [Scaife repository MIT notice, copyright 2024 Perseus Digital Library](https://github.com/scaife-viewer/atlas-data-prep/blob/main/LICENSE). A copy is included in data/CUNLIFFE-LICENSE.txt.
 - SHA-256 f1b6da0e0d19a930fa92c26a133d472d1da2d3e22f9b13962db034959a7c4362. The upstream commit was not pinned.
 
-## Smyth offline grammar
+## Smyth grammar
 
 Herbert Weir Smyth, *A Greek Grammar for Colleges* (1920). The supplied Alpheios Unicode TEI edition derives from the Perseus Project transcription, with corrections and formatting by Alpheios. The reader adapts the XML body into local HTML and a section search index. It preserves source section IDs, text, tables and resolvable internal references. Print-page markers are omitted from display.
 

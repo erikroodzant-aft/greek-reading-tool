@@ -1,4 +1,4 @@
-"""Build an offline Smyth edition from the Alpheios Unicode TEI source."""
+"""Build a searchable Smyth edition from the Alpheios Unicode TEI source."""
 import argparse
 from collections import Counter
 from hashlib import sha256
@@ -150,9 +150,9 @@ def build(source, output):
 <p id="section-status" role="status"></p>
 <form id="text-search"><label>Search the grammar <input id="query" type="search" required></label> <button>Search</button></form>
 <p id="search-status" role="status"></p><ol id="search-results"></ol>
-<p>Perseus Project transcription, with Alpheios corrections and formatting. Adapted to offline HTML and a text index. <a href="{SOURCE}">Source XML</a> · <a href="{LICENSE}">CC BY-NC-SA 3.0 US</a></p></header>
+<p>Perseus Project transcription, with Alpheios corrections and formatting. Adapted for Heleios with full-text search. <a href="{SOURCE}">Source XML</a> · <a href="{LICENSE}">CC BY-NC-SA 3.0 US</a></p></header>
 <main>"""
-    (output / "smyth.html").write_text(header + contents + '</main><script type="module" src="smyth-book.mjs"></script></html>', encoding="utf-8")
+    (output / "smyth.html").write_text(header + contents + '</main><footer><a href="smyth.html">Open the full grammar</a></footer><script type="module" src="smyth-book.mjs"></script></html>', encoding="utf-8")
     print(f"{len(sections)} numbered sections, {len(ids)} source anchors, {sum(1 for _ in body.iter('table'))} tables")
     print("Source SHA-256:", sha256(raw).hexdigest())
 

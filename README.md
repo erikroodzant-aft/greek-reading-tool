@@ -2,7 +2,7 @@
 
 *A companion for reading ancient texts*
 
-A Greek reader with the Iliad and Odyssey, word morphology, Cunliffe's lexicon, sentence dependency diagrams, and searchable offline Smyth grammar.
+A Greek reader with the Iliad and Odyssey, word morphology, Cunliffe's lexicon, sentence dependency diagrams, and searchable Smyth grammar.
 
 ## Try the reader
 
@@ -44,13 +44,13 @@ The static application can be served from the repository root. After uploading, 
 
 ## Cunliffe dictionary
 
-Select a Greek word to look up its treebank lemma in the bundled Cunliffe dictionary. Open the headword to read the full definition. The reader loads the dictionary from the extracted folder and works offline. Matching preserves accents. Where the lemma has no exact match, the panel links to Scaife ATLAS for online lookup.
+Select a Greek word to look up its treebank lemma in the bundled Cunliffe dictionary. Open the headword to read the full definition. The dictionary is included with the site and downloadable package. Matching preserves accents. Where the lemma has no exact match, the panel links to Scaife ATLAS for lookup.
 
 ## Smyth grammar reference
 
-Open **Smyth grammar reference** above the passage to search the selected index by topic or section number. When the selected word has a relevant reference, expand **Smyth grammar references** in the side panel. For example, Smyth § 1475 cites Iliad 1.3, where the verb of motion takes Ἄϊδι in the dative. Reference links open the bundled Smyth text at the section. **Open the full offline grammar** to search across all 3,048 numbered sections or jump directly to a number.
+Use **Open the full grammar** in the footer to read Smyth, search across all 3,048 numbered sections, or jump directly to a section number. When the selected word has a relevant reference, expand **Smyth grammar references** in the side panel. For example, Smyth § 1475 cites Iliad 1.3, where the verb of motion takes Ἄϊδι in the dative. Word-specific links open the Smyth text at the relevant section; the footer link opens the full text without a section fragment.
 
-When the displayed verses are cited in Smyth, expand **Smyth citations for these verses** beneath the passage. In the offline grammar, click a linked Homer citation to open the verse in the reader. The links use explicitly marked citations and the manually verified Iliad 1.3 example. Unresolved source references are listed in the validation report.
+Expand **Smyth’s Greek Grammar** beneath any passage to open the full grammar. When the displayed verses are cited in Smyth, a **Citations for these verses** list appears below that link. In the grammar, click a linked Homer citation to open the verse in the reader. The links use explicitly marked citations and the manually verified Iliad 1.3 example. Unresolved source references are listed in the validation report.
 
 ## Dictionary previews and missing data
 

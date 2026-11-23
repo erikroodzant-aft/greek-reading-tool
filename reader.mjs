@@ -1,5 +1,5 @@
 import {bookLoadMessage} from "./reader-errors.mjs";
-import {searchSmyth, smythForWord} from "./smyth.mjs";
+import {smythForWord} from "./smyth.mjs";
 import {atlasHeadword, entryUrl, lemmaKey, parseCunliffe, entryPreview, referenceTree, referenceLabel} from "./lexicon.mjs";
 import {agreement, readableMorphology, readableRelation} from "./grammar.mjs";
 import {drawDiagram} from "./diagram.mjs";
@@ -70,17 +70,6 @@ function renderSmythLinks(parent, topics) {
     externalLink(row, "§ " + topic.section + " · " + topic.title, topic.url);
   }
 }
-
-function renderSmythIndex() {
-  const list = $("smyth-results");
-  list.replaceChildren();
-  const topics = searchSmyth($("smyth-search").value);
-  if (topics.length) renderSmythLinks(list, topics);
-  else text("li", "No matching topics in this reference index.", list);
-}
-
-$("smyth-search").oninput = renderSmythIndex;
-renderSmythIndex();
 
 function renderSmythContext(word) {
   const panel = $("smyth-context");
@@ -249,10 +238,12 @@ function inspect(sid, tid) {
 }
 
 async function renderHomerCitations(work, book, lines, sequence) {
-  const panel = $("homer-citations");
+  const panel = $("homer-citation-results");
   const list = $("homer-citation-list");
+  const status = $("homer-citation-status");
   panel.hidden = true;
   list.replaceChildren();
+  status.textContent = "";
   try {
     citationRequest ??= fetch("data/smyth-homer.json").then(response => {
       if (!response.ok) throw new Error("Citation index unavailable");
@@ -277,8 +268,7 @@ async function renderHomerCitations(work, book, lines, sequence) {
     panel.hidden = !list.childElementCount;
   } catch {
     if (sequence === request) {
-      text("li", "Could not load the local citation index.", list);
-      panel.hidden = false;
+      status.textContent = "Could not load citations for these verses. The full grammar is still available above.";
     }
   }
 }
@@ -344,7 +334,9 @@ async function load() {
   $("line").value = line;
   $("status").textContent = "Loading book…";
   $("verses").replaceChildren();
-  $("homer-citations").hidden = true;
+  $("homer-citation-results").hidden = true;
+  $("homer-citation-list").replaceChildren();
+  $("homer-citation-status").textContent = "";
   $("unplaced").hidden = true;
   $("previous").disabled = $("next").disabled = true;
   $("word").textContent = "Select a Greek word to inspect its morphology and dependencies.";

@@ -46,13 +46,13 @@ The downloaded Scaife JSONL contains 9,825 parseable records with distinct entry
 
 Counts use the reader's exact, accent-preserving lemma match. They exclude tokens without a Greek lemma and count each sentence once. The coverage measures matches to headwords. It does not evaluate contextual sense or alternate spellings.
 
-All 19 current JavaScript tests passed. The complete bundled dictionary was parsed with the production parser for the coverage check. The offline side-panel flow has not been exercised in a browser for this build.
+All 19 current JavaScript tests passed. The complete bundled dictionary was parsed with the production parser for the coverage check. The local side-panel flow has not been exercised in a browser for this build.
 
 ## Smyth reference index
 
 The reader indexes ten selected topics and provides references based on source relations or morphology. Smyth § 1475 explicitly cites Iliad 1.3. Tests verify this reference is restricted to that passage, role-based suggestions for the object complement and adverbial accusative, and section-number and Greek-keyword search. The index contains reference metadata. The full grammar is available through the linked edition. The UI has not been exercised in a browser for this build.
 
-## Full offline Smyth edition
+## Full Smyth edition
 
 The supplied Alpheios TEI XML parsed successfully and contains numbered sections 1 through 3048 exactly once. An independent HTML parse matched the XML body text after whitespace normalization, as well as all 3,072 source anchors and 289 tables. Automated tests checked that the curated topic links resolve to local anchors and that section-number and Greek text search find § 1475. All 22 JavaScript tests passed. Browser rendering and navigation were not visually checked for this build.
 
